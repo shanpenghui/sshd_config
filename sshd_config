@@ -1,0 +1,11 @@
+Port 2222
+PasswordAuthentication yes
+PermitEmptyPasswords no
+PermitRootLogin yes
+UsePAM no
+Subsystem sftp internal-sftp
+Match Group remote_user
+    ChrootDirectory /
+    ForceCommand internal-sftp
+    AllowTcpForwarding no
+    X11Forwarding no
